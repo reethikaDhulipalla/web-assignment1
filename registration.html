@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+            box-sizing: border-box;
+        }
+        h1{
+            text-align: center;
+            margin-bottom: 20px;
+            color: blue;
+        }
+        form{
+            background-color:rgba(207, 232, 242, 0.715);
+        }
+        div{
+            padding:10px;
+        }
+        button{
+            margin-top:10px;
+        }
+        label.required::after {
+            content: "*"; 
+            color: red; 
+            margin-left: 5px;
+        }
+        .required-info{
+            color:red;
+        }
+        .example-email{
+            color:rgb(15, 247, 247);
+        }
+        body{
+            border:1px solid;
+            width:1000px;
+            display: block;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    
+    <form>
+    <h1>Registration Form</h1>
+    <div>
+        <div>
+        <label for="text" class="required"> First Name(Minimum 6 characters)</label>
+        <input type="text" name="text" id="text" required minlength="6">
+        </div>
+        <div>
+        <label for="lastname" class="required">Last Name</label>
+        <input type="text" name="lastname" id="lastname" required>
+        </div>
+        <div>
+            <label for="email" class="required">EmailAddress</label>
+            <input type="text" name="email" id="email" required>
+        </br>
+        <p class="required-info">(one email-id only):   <span class="example-email">eg:smith@hotmail.com</span></p>
+        </div>
+        <div>
+            <label for="wrod" class="required">Password(minimum 6 characters)</label>
+            <input type="password" name="wrod" id="wrod">
+        </div>
+        <div>
+            <label for="address" class="required">Address</label>
+           <textarea name="address" id="address" cols="20" rows="5"></textarea>
+        </div>
+        <div>
+            <label for="no" class="required">Mobile No</label>
+            <input type="number" name="no" id="no">
+        </div>
+        <div>
+            <label for="">Gender</label>
+            <input type="radio" name="gender" id="male">
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="female">
+            <label for="female">Female</label>
+        </div>
+        <button type="submit">submit</button>
+        <button type="submit">reset</button>
+    </div>
+</form>
+</body>
+</html>
